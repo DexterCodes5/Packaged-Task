@@ -3,7 +3,7 @@
 using namespace std::literals;
 
 int main() {
-	std::packaged_task<void* (unsigned&&)> ptask([](unsigned&& x) { return new unsigned(x); });
+	std::packaged_task<void*(unsigned&&)> ptask([](unsigned&& x) { return new unsigned(x); });
 
 	std::future<void*> fut = ptask.get_future();
 
