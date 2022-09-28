@@ -13,4 +13,5 @@ void main(int argc, char* argv[]) {
 	t.join();
 	void* ptr = fut.get();
 	std::cout << *(int*)ptr << std::endl;
+	delete[] ptr;
 }
